@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Container, Grid, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 
 
 import { getDetailDataPoke } from './../../utils/getData';

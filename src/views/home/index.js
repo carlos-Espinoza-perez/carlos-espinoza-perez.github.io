@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Grid, Typography } from '@mui/material';
 
 
-import Poke_Card from './../../components/card/index';
+import PokeCard from './../../components/card/index';
 import { getListDataPoke } from '../../utils/getData';
 
 let style = {
@@ -39,7 +39,7 @@ function Home__Index() {
                 <Grid container spacing={2} rowSpacing={4} justifyContent="center">
                     {
                         data.map(a => (
-                            <Poke_Card pokemon={a} key={a.id}/>
+                            <PokeCard pokemon={a} key={a.id}/>
                         ))
                     }
                 </Grid>

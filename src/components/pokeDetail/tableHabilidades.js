@@ -8,7 +8,6 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 
-import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
@@ -24,7 +23,7 @@ let rows = [];
 
 const createRow = (abilities) => {
     rows = [];
-    if (abilities.length == 0) return;
+    if (abilities.length === 0) return;
     for (const item of abilities) {
         const habilidadId = item.ability.url.split("/")[item.ability.url.split("/").length - 2];
 
@@ -41,7 +40,7 @@ export default function BasicTable(props) {
     const handleClick = async (habilidadId) => {
         const getHabilidad = await getHabilidadDataPoke(habilidadId);
 
-        setText(`Habilidad: ${getHabilidad.effect_entries.find(a => a.language.name == "en").effect}`);
+        setText(`Habilidad: ${getHabilidad.effect_entries.find(a => a.language.name === "en").effect}`);
         setOpen(true);
     };
 

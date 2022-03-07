@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { Container, Grid, Typography } from '@mui/material';
 
 
-import Poke_Card from './../../components/card/index';
+import PokeCard from './../../components/card/index';
 import { getListDataPoke } from './../../utils/getData';
 
 
@@ -31,7 +31,7 @@ export default function Filter() {
         let listPokemon = await getListDataPoke();
 
 
-        listPokemon = listPokemon.filter(a => a.name.toLocaleLowerCase().search(nombre.toLocaleLowerCase()) != -1);
+        listPokemon = listPokemon.filter(a => a.name.toLocaleLowerCase().search(nombre.toLocaleLowerCase()) !== -1);
         setData(listPokemon);
     };
 
@@ -51,7 +51,7 @@ export default function Filter() {
                 <Grid container spacing={2} rowSpacing={4} justifyContent="center">
                     {
                         data.map(a => (
-                            <Poke_Card pokemon={a} key={a.id}/>
+                            <PokeCard pokemon={a} key={a.id}/>
                         ))
                     }
                 </Grid>
