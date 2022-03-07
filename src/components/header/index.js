@@ -99,7 +99,7 @@ export default function SearchAppBar(props) {
               <SearchIcon />
             </SearchIconWrapper>
               <StyledInputBase
-                style={{ minWidth: '400px' }}
+                style={{ minWidth: '300px' }}
                 placeholder="Pokémon"
                 inputProps={{ 'aria-label': 'search' }}
                 onChange={redireccionAFilter}

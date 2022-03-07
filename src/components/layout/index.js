@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { getListDataPoke } from '../../utils/getData';
-import FilterIndex from '../../views/filter';
 import HomeIndex from '../../views/home';
 import HomeDetails from '../../views/home/detail';
 
@@ -53,7 +52,6 @@ class Layout extends React.Component {
                 <Routes>
                     <Route path='/' element={ <HomeIndex listPokemon={this.state.listPokemon} /> }/>
                     <Route path='/Poke/Details/:id' element={ <HomeDetails /> }/>
-                    <Route path='/Filter/:nombre' element={ <FilterIndex /> }/>
                 </Routes>
             </BrowserRouter>
         );
