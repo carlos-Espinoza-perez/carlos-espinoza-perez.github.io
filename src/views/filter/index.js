@@ -20,42 +20,61 @@ let style = {
 }
 
 
+class Filter extends React.Component {
+    constructor(args) {
+        super(args);
+    }
 
-export default function Filter() {
-    const [data, setData] = useState([]);
-    
-    const { nombre } = useParams();
+    componentDidMount() {
+        debugger
+    }
 
-
-    const getPokemones = async () => {
-        let listPokemon = await getListDataPoke();
-
-
-        listPokemon = listPokemon.filter(a => a.name.toLocaleLowerCase().search(nombre.toLocaleLowerCase()) !== -1);
-        setData(listPokemon);
-    };
-
-    useEffect(()=>{
-        getPokemones()
-    }, [])
-    
-
-    return (
-        <React.Fragment>
-            <Typography variant="h5" style={ style.title }>
-                Pokémon que coincide con: { nombre }
-            </Typography>
-
-
-            <Container maxWidth="lg">
-                <Grid container spacing={2} rowSpacing={4} justifyContent="center">
-                    {
-                        data.map(a => (
-                            <PokeCard pokemon={a} key={a.id}/>
-                        ))
-                    }
-                </Grid>
-            </Container>
-        </React.Fragment>
-    )
+    render() {
+        return (
+            <h1>Hola</h1>
+        )
+    }
 }
+
+export default Filter;
+
+// export default function Filter() {
+//     const [data, setData] = useState([]);
+    
+//     const { nombre } = useParams();
+
+
+//     const getPokemones = async () => {
+//         let listPokemon = await getListDataPoke();
+
+
+//         listPokemon = listPokemon.filter(a => a.name.toLocaleLowerCase().indexOf(nombre.toLocaleLowerCase()) !== -1);
+        
+//         debugger
+//         setData(listPokemon);
+//     };
+
+//     useEffect(()=>{
+//         getPokemones()
+//     }, [])
+    
+
+//     return (
+//         <React.Fragment>
+//             <Typography variant="h5" style={ style.title }>
+//                 Pokémon que coincide con: { nombre }
+//             </Typography>
+
+
+//             <Container maxWidth="lg">
+//                 <Grid container spacing={2} rowSpacing={4} justifyContent="center">
+//                     {
+//                         data.map(a => (
+//                             <PokeCard pokemon={a} key={a.id}/>
+//                         ))
+//                     }
+//                 </Grid>
+//             </Container>
+//         </React.Fragment>
+//     )
+// }

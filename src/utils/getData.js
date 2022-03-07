@@ -6,7 +6,7 @@ const getListDataPoke = async () => {
 
     let response = [];
 
-    await fetch("https://pokeapi.co/api/v2/pokemon?limit=250")
+    await fetch("https://pokeapi.co/api/v2/pokemon?limit=200")
         .then(a => a.json())
         .then(a => response = a)
         .catch(a => alert("Error en la peticion."));

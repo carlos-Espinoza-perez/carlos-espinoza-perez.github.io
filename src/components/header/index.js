@@ -55,19 +55,20 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 
 
-export default function SearchAppBar() {
+export default function SearchAppBar(props) {
   let navigate = useNavigate();
 
   const redireccionAFilter = (input) => {
-    const value = input.target[0].value;
+    props.filter(input);
+    // const value = input.target[0].value;
 
-    if (value === "") {
-      navigate("/");
-    }
+    // if (value === "") {
+    //   navigate("/");
+    // }
 
-    else {
-      navigate(`/Filter/${value}`);
-    }
+    // else {
+    //   navigate(`/Filter/${value}`);
+    // }
   };
 
   return (
@@ -97,15 +98,12 @@ export default function SearchAppBar() {
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
-            <form onSubmit={redireccionAFilter} method="dialog">
               <StyledInputBase
                 style={{ minWidth: '400px' }}
                 placeholder="Pokémon"
                 inputProps={{ 'aria-label': 'search' }}
-                // onChange={redireccionAFilter}
-                type="text"
+                onChange={redireccionAFilter}
               />
-            </form>
           </Search>
         </Toolbar>
       </AppBar>

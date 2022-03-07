@@ -17,17 +17,9 @@ let style = {
     }
 }
 
-function Home__Index() {
-    const [data, setData] = useState([]);
+function Home__Index(props) {
+    const data = props.listPokemon || [];
 
-    const getPokemones = async () => {
-        setData(await getListDataPoke());
-    };
-
-    useEffect(()=>{
-        getPokemones()
-    }, [])
-    
     return (
         <React.Fragment>
             <Typography variant="h5" style={ style.title }>
