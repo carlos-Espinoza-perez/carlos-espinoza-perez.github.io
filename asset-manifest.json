@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/carlos-Espinoza-perez/poke/static/css/main.67b8d9ef.css",
-    "main.js": "/carlos-Espinoza-perez/poke/static/js/main.c2741615.js",
-    "index.html": "/carlos-Espinoza-perez/poke/index.html",
-    "main.67b8d9ef.css.map": "/carlos-Espinoza-perez/poke/static/css/main.67b8d9ef.css.map",
-    "main.c2741615.js.map": "/carlos-Espinoza-perez/poke/static/js/main.c2741615.js.map"
+    "main.css": "/static/css/main.67b8d9ef.css",
+    "main.js": "/static/js/main.c2741615.js",
+    "index.html": "/index.html",
+    "main.67b8d9ef.css.map": "/static/css/main.67b8d9ef.css.map",
+    "main.c2741615.js.map": "/static/js/main.c2741615.js.map"
   },
   "entrypoints": [
     "static/css/main.67b8d9ef.css",
